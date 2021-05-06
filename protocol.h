@@ -1,3 +1,3 @@
 #include <stdio.h>
 
-int fooz(void);
+int fooz(int p);
