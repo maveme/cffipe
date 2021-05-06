@@ -23,8 +23,9 @@ ffibuilder.embedding_init_code("""
     
     @ffi.def_extern()
     def fooz(val):
-        print("hola")
-        return 7
+        print("hello")
+        return val
+""")
 
 """)
 

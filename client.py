@@ -4,7 +4,7 @@ from cffi import FFI
 
 ffi = FFI()
 ffi.cdef("""
-int fooz(int a);
+        int fooz(int a);
 """)
 
 # lib = ffi.dlopen("Dotnet_API.dylib")
