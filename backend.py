@@ -27,7 +27,6 @@ ffibuilder.embedding_init_code("""
         return val
 """)
 
-""")
 
 if __name__ == "__main__":
     # ffibuilder.compile(target="lang_protocol-1.0.*",verbose=True)
