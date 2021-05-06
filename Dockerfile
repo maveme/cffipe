@@ -1,8 +1,9 @@
-FROM python:3
+FROM python:3.8-buster
 
-RUN pip install cffi
-
+# RUN pip install cffi
 COPY . .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 RUN python backend.py
 
