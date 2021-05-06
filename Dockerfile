@@ -4,8 +4,14 @@ RUN pip install cffi
 
 COPY . .
 
-RUN python ./backend.py
+RUN python backend.py
 
 RUN ls
 
-CMD [ "python", "./client.py" ]
+RUN ldconfig
+
+ENV LD_LIBRARY_PATH="./lang_protocol.so" 
+
+RUN python client.py
+
+CMD [ "python", "client.py" ]

@@ -6,18 +6,20 @@ with open('protocol.h') as f:
     data = ''.join([line for line in f if not line.startswith('#')])
     ffibuilder.embedding_api(data)
 
-ffibuilder.set_source("lang_protocol", r'''
+ffibuilder.set_source("lang_protocol", 
+r"""
     #include "protocol.h"
-''')
+""")
 
 ffibuilder.embedding_init_code("""
     from lang_protocol import ffi
 
     @ffi.def_extern()
-    def fooz():
-        print("hello")
-        return 4
+    def fooz(c):
+        print("hola")
+        a = 1+1
+        return 1
 """)
 
-
-ffibuilder.compile(verbose=True)
+if __name__ == "__main__":
+    ffibuilder.compile(verbose=True)
