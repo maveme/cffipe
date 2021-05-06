@@ -14,9 +14,9 @@ ffibuilder.embedding_init_code("""
     from lang_protocol import ffi
 
     @ffi.def_extern()
-    def fooz():
+    def fooz(val):
         print("hello")
-        return 4
+        return val
 """)
 
 
